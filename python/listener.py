@@ -18,7 +18,7 @@ def main():
     if c2port <= 0:
         print("{}: invalid port '{}'".format(sys.argv[0], sys.argv[2]))
 
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind((c2ip, c2port))
     s.listen(1)
